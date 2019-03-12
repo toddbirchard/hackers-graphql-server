@@ -1,0 +1,11 @@
+hackersandslackers.app
+
+proxy / localhost:4466/hackers-graphql/prod {
+ transparent
+}
+
+proxy hackersandslackers.app localhost:4466/hackers-graphql/prod {
+ transparent
+}
+
+errors proxieserrors.log

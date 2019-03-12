@@ -1,0 +1,11 @@
+endpoint: http://localhost:4466/hackers-graphql/prod
+datamodel: datamodel.prisma
+secret: ${env:SECRET}
+
+generate:
+  - generator: typescript-client
+    output: ./generated/prisma-client/
+
+hooks:
+  post-deploy:
+    - prisma generate

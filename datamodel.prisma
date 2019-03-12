@@ -1,0 +1,49 @@
+type epicMeta {
+  id: ID! @unique
+  updatedAt: DateTime!
+  createdAt: DateTime!
+  color: String!
+  name: String!
+}
+
+type author {
+  id: ID! @unique
+  name: String!
+  slug: String
+  email: String
+  bio: String
+  website: String
+  location: String
+  facebook: String
+  twitter: String
+  title: String
+  linkedin: String
+  vimeo: String
+  quora: String
+  medium: String
+  github: String
+  meetup: String
+  pocket: String
+  updatedAt: DateTime!
+  createdAt: DateTime!
+}
+
+type jiraIssue {
+  id: ID! @unique
+  key: String! @unique
+  assignee_name: String
+  assignee_url: String
+  summary: String
+  status: String!
+  priority_name: String
+  priority_url: String
+  priority_rank: Int
+  updated: DateTime
+  updatedAt: DateTime!
+  createdAt: DateTime!
+  epic_color: String
+  epic_name: String
+  project: String!
+  issuetype_name: String
+  issuetype_url: String
+}
